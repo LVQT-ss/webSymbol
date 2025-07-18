@@ -33,16 +33,16 @@ import appStoreLogo from "../assets/ios-app-store.webp";
 import googlePlayLogo from "../assets/google-play.webp";
 import reactLogo from "../assets/react.svg";
 import yellowBg from "../assets/yellow-background.png";
-
+import logo from "../assets/app-logo.jpg";
 export default function MobileAppLanding() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="fixed w-full top-0 z-50">
+      <header className="relative w-full top-0 z-50">
         {/* Top Contact Bar */}
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2">
+        {/* <div className="bg-gradient-to-r from-green-400 to-yellow-500 text-white py-2">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
               <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
@@ -63,7 +63,7 @@ export default function MobileAppLanding() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Navigation */}
         <nav className="bg-white shadow-lg">
@@ -74,19 +74,19 @@ export default function MobileAppLanding() {
               <div className="hidden md:flex items-center space-x-8 flex-1">
                 <a
                   href="#"
-                  className="hover:text-purple-600 transition-colors font-medium uppercase"
+                  className="hover:text-yellow-600 transition-colors font-medium uppercase"
                 >
                   Home
                 </a>
                 <a
                   href="#"
-                  className="hover:text-purple-600 transition-colors font-medium uppercase"
+                  className="hover:text-yellow-600 transition-colors font-medium uppercase"
                 >
                   About
                 </a>
                 <a
                   href="#"
-                  className="hover:text-purple-600 transition-colors font-medium uppercase"
+                  className="hover:text-yellow-600 transition-colors font-medium uppercase"
                 >
                   Features
                 </a>
@@ -94,9 +94,7 @@ export default function MobileAppLanding() {
 
               {/* Logo - Centered */}
               <div className="flex items-center space-x-2 flex-shrink-0">
-                <div className="w-8 h-8 bg-white rounded-sm flex items-center justify-center shadow-md">
-                  <div className="w-0 h-0 border-l-[6px] border-r-[6px] border-b-[10px] border-l-transparent border-r-transparent border-b-purple-600"></div>
-                </div>
+                <img src={logo} alt="logo" className="w-10 h-10" />
                 <span className="text-xl font-bold tracking-wide text-gray-900">
                   APPOLLY
                 </span>
@@ -106,17 +104,17 @@ export default function MobileAppLanding() {
               <div className="hidden md:flex items-center space-x-8 flex-1 justify-end">
                 <a
                   href="#"
-                  className="hover:text-purple-600 transition-colors font-medium uppercase"
+                  className="hover:text-yellow-600 transition-colors font-medium uppercase"
                 >
                   Screenshot
                 </a>
                 <a
                   href="#"
-                  className="hover:text-purple-600 transition-colors font-medium uppercase"
+                  className="hover:text-yellow-600 transition-colors font-medium uppercase"
                 >
                   Blog
                 </a>
-                <Button className="bg-purple-600 text-white hover:bg-purple-700 font-semibold px-6 py-2 rounded-md uppercase">
+                <Button className="bg-yellow-600 text-white hover:bg-yellow-700 font-semibold px-6 py-2 rounded-md uppercase">
                   Download
                 </Button>
               </div>
@@ -127,7 +125,7 @@ export default function MobileAppLanding() {
                   variant="outline"
                   size="icon"
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500"
+                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500"
                 >
                   <span className="sr-only">Open main menu</span>
                   {isMenuOpen ? (
@@ -145,36 +143,36 @@ export default function MobileAppLanding() {
                 <div className="space-y-1">
                   <a
                     href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-purple-600 bg-purple-50"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-yellow-600 bg-yellow-50"
                   >
                     Home
                   </a>
                   <a
                     href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-yellow-600 hover:bg-yellow-50"
                   >
                     About
                   </a>
                   <a
                     href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-yellow-600 hover:bg-yellow-50"
                   >
                     Features
                   </a>
                   <a
                     href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-yellow-600 hover:bg-yellow-50"
                   >
                     Screenshot
                   </a>
                   <a
                     href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-yellow-600 hover:bg-yellow-50"
                   >
                     Blog
                   </a>
                   <div className="px-3 py-2">
-                    <Button className="w-full bg-purple-600 text-white hover:bg-purple-700 uppercase">
+                    <Button className="w-full bg-yellow-600 text-white hover:bg-yellow-700 uppercase">
                       Download
                     </Button>
                   </div>
@@ -184,9 +182,6 @@ export default function MobileAppLanding() {
           </div>
         </nav>
       </header>
-
-      {/* Add margin-top to account for fixed header */}
-      <div className="pt-[132px]"></div>
 
       {/* Hero Section */}
       <section className="relative py-20 lg:min-h-[calc(100vh-4rem)]">
@@ -235,7 +230,7 @@ export default function MobileAppLanding() {
             <div className="flex justify-center lg:justify-end relative">
               <div className="w-full max-w-lg xl:max-w-xl">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 rounded-[2.5rem] blur-xl opacity-50 animate-pulse"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-blue-400 rounded-[2.5rem] blur-xl opacity-50 animate-pulse"></div>
                   <img
                     src="/app-mockup.png"
                     alt="Mobile App Mockup"
@@ -263,7 +258,7 @@ export default function MobileAppLanding() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-200 to-blue-200 rounded-[2rem] blur-xl opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-200 to-blue-200 rounded-[2rem] blur-xl opacity-50"></div>
               <img
                 src="/app-features.png"
                 alt="Android Smartphone"
@@ -273,8 +268,8 @@ export default function MobileAppLanding() {
             <div className="space-y-6">
               <Card className="transform hover:scale-105 transition-transform duration-300 hover:shadow-lg">
                 <CardContent className="flex items-start space-x-4 p-6">
-                  <div className="bg-purple-100 p-3 rounded-lg">
-                    <CheckCircle className="w-6 h-6 text-purple-600" />
+                  <div className="bg-yellow-100 p-3 rounded-lg">
+                    <CheckCircle className="w-6 h-6 text-yellow-600" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800 uppercase mb-2">
@@ -291,8 +286,8 @@ export default function MobileAppLanding() {
 
               <Card className="transform hover:scale-105 transition-transform duration-300 hover:shadow-lg">
                 <CardContent className="flex items-start space-x-4 p-6">
-                  <div className="bg-purple-100 p-3 rounded-lg">
-                    <CheckCircle className="w-6 h-6 text-purple-600" />
+                  <div className="bg-yellow-100 p-3 rounded-lg">
+                    <CheckCircle className="w-6 h-6 text-yellow-600" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800 uppercase mb-2">
@@ -309,8 +304,8 @@ export default function MobileAppLanding() {
 
               <Card className="transform hover:scale-105 transition-transform duration-300 hover:shadow-lg">
                 <CardContent className="flex items-start space-x-4 p-6">
-                  <div className="bg-purple-100 p-3 rounded-lg">
-                    <CheckCircle className="w-6 h-6 text-purple-600" />
+                  <div className="bg-yellow-100 p-3 rounded-lg">
+                    <CheckCircle className="w-6 h-6 text-yellow-600" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800 uppercase mb-2">
@@ -330,7 +325,7 @@ export default function MobileAppLanding() {
       </section>
 
       {/* App Features */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-yellow-600 to-blue-600 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold uppercase mb-4">
@@ -476,7 +471,7 @@ export default function MobileAppLanding() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full border-purple-600 text-purple-600 bg-transparent"
+                className="rounded-full border-yellow-600 text-yellow-600 bg-transparent"
               >
                 <ChevronLeft className="w-6 h-6" />
               </Button>
@@ -486,15 +481,15 @@ export default function MobileAppLanding() {
                     key={i}
                     className={`w-4 h-4 rounded-full ${
                       i === 0
-                        ? "bg-purple-600 border-2 border-purple-600"
-                        : "bg-purple-600"
+                        ? "bg-yellow-600 border-2 border-yellow-600"
+                        : "bg-yellow-600"
                     }`}
                   />
                 ))}
               </div>
               <Button
                 size="icon"
-                className="rounded-full bg-purple-600 hover:bg-purple-700"
+                className="rounded-full bg-yellow-600 hover:bg-yellow-700"
               >
                 <ChevronRight className="w-6 h-6" />
               </Button>
@@ -531,17 +526,17 @@ export default function MobileAppLanding() {
               </div>
 
               <div className="grid grid-cols-3 gap-4">
-                <Card className="bg-purple-600 text-white p-6 text-center">
+                <Card className="bg-yellow-600 text-white p-6 text-center">
                   <Download className="w-8 h-8 mx-auto mb-2" />
                   <div className="text-2xl font-bold">59865</div>
                   <div className="text-sm uppercase">Download</div>
                 </Card>
-                <Card className="bg-purple-600 text-white p-6 text-center">
+                <Card className="bg-yellow-600 text-white p-6 text-center">
                   <ThumbsUp className="w-8 h-8 mx-auto mb-2" />
                   <div className="text-2xl font-bold">29852</div>
                   <div className="text-sm uppercase">Like</div>
                 </Card>
-                <Card className="bg-purple-600 text-white p-6 text-center">
+                <Card className="bg-yellow-600 text-white p-6 text-center">
                   <Star className="w-8 h-8 mx-auto mb-2" />
                   <div className="text-2xl font-bold">1500</div>
                   <div className="text-sm uppercase">5 Star Rating</div>
@@ -560,7 +555,7 @@ export default function MobileAppLanding() {
       </section>
 
       {/* How to Use Video */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-yellow-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold uppercase mb-4">
             How to Use the App Perfectly
@@ -571,7 +566,7 @@ export default function MobileAppLanding() {
           </p>
 
           <div className="relative">
-            <div className="bg-gradient-to-r from-purple-600/40 to-blue-600/40 rounded-lg h-80 flex items-center justify-center">
+            <div className="bg-gradient-to-r from-yellow-600/40 to-blue-600/40 rounded-lg h-80 flex items-center justify-center">
               <Button
                 size="lg"
                 className="rounded-full bg-white/20 hover:bg-white/30 p-6"
@@ -604,7 +599,7 @@ export default function MobileAppLanding() {
             ].map((member, index) => (
               <Card key={index} className="text-center p-6">
                 <div className="relative mb-6">
-                  <div className="w-48 h-48 mx-auto rounded-full border-4 border-purple-600 overflow-hidden">
+                  <div className="w-48 h-48 mx-auto rounded-full border-4 border-yellow-600 overflow-hidden">
                     <img
                       src="/placeholder.svg?height=198&width=198"
                       alt={member.name}
@@ -621,7 +616,7 @@ export default function MobileAppLanding() {
                   Viverra nunc ante velit vitae. Est tellus vitae.
                 </p>
                 <div className="flex justify-center space-x-4">
-                  <Facebook className="w-5 h-5 text-purple-600" />
+                  <Facebook className="w-5 h-5 text-yellow-600" />
                   <Instagram className="w-5 h-5 text-gray-800" />
                   <Twitter className="w-5 h-5 text-gray-800" />
                   <Youtube className="w-5 h-5 text-gray-800" />
@@ -633,7 +628,7 @@ export default function MobileAppLanding() {
       </section>
 
       {/* Customer Reviews */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-yellow-600 to-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold uppercase mb-4">
@@ -716,7 +711,7 @@ export default function MobileAppLanding() {
                   </p>
                   <a
                     href="#"
-                    className="text-purple-600 font-semibold uppercase underline"
+                    className="text-yellow-600 font-semibold uppercase underline"
                   >
                     Read more
                   </a>
@@ -732,7 +727,7 @@ export default function MobileAppLanding() {
         <Card className="bg-white shadow-2xl rounded-3xl p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="flex items-center space-x-4">
-              <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center">
+              <div className="w-20 h-20 bg-yellow-600 rounded-full flex items-center justify-center">
                 <Mail className="w-8 h-8 text-white" />
               </div>
               <div>
@@ -742,7 +737,7 @@ export default function MobileAppLanding() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center">
+              <div className="w-20 h-20 bg-yellow-600 rounded-full flex items-center justify-center">
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <div>
@@ -766,7 +761,7 @@ export default function MobileAppLanding() {
                 nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.
               </p>
               <div className="flex space-x-4">
-                <Facebook className="w-5 h-5 text-purple-600" />
+                <Facebook className="w-5 h-5 text-yellow-600" />
                 <Instagram className="w-5 h-5" />
                 <Twitter className="w-5 h-5" />
                 <Youtube className="w-5 h-5" />
@@ -815,7 +810,7 @@ export default function MobileAppLanding() {
                   placeholder="Your email address"
                   className="rounded-r-none bg-white text-gray-800"
                 />
-                <Button className="bg-purple-600 hover:bg-purple-700 rounded-l-none">
+                <Button className="bg-yellow-600 hover:bg-yellow-700 rounded-l-none">
                   <Send className="w-4 h-4" />
                 </Button>
               </div>
